@@ -1,0 +1,65 @@
+{% extends 'base/main.html' %}
+
+{% block title %}About | {% endblock title %}
+
+{% block aboutactive %}active{% endblock aboutactive %}
+
+{% block content %}
+
+<!-- <h1>This is About Page</h1>
+<a href="{% url 'base-author' first_name='Dharmjeet' %}">Dharmjeet</a> -->
+
+<div class="container py-3">
+    <h2 class="py-2">Our Instructors :</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h4>Dharmjeet Vaishnav</h4>
+                    <p class="card-text">A Python Web Developer is responsible for writing server-side web application
+                        logic. Python web developers usually develop back-end components, connect the application with
+                        the other (often third-party) web services, and support the front-end developers by integrating
+                        their work with the Python application.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="{% url 'base-author' first_name='Dharmjeet' %}" class="btn btn-outline-primary">See All
+                            BlogPosts</a>
+                        <small class="badge badge-secondary p-2">Python</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h4>Deep Langhnoja</h4>
+                    <p class="card-text">A Java developer is a specialised type of programmer who may collaborate with
+                        web developers and software engineers to integrate Java into business applications, software and
+                        websites.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="{% url 'base-author' first_name='Deep' %}" class="btn btn-outline-primary">See All
+                            BlogPosts</a>
+                        <small class="badge badge-secondary p-2">Java</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h4>Kandarp Dangi</h4>
+                    <p class="card-text">A JavaScript Developer is responsible for completing the design of applications
+                        and software using Java programming language. JavaScript Developers work with websites,
+                        producing front-end applications, and performing code analysis and overall improvement of style
+                        and usability.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="{% url 'base-author' first_name='kandarp' %}" class="btn btn-outline-primary">See All
+                            BlogPosts</a>
+                        <small class="badge badge-secondary p-2">JavaScript</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

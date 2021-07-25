@@ -1,0 +1,83 @@
+<!-- SignUp Modal -->
+<div class="modal fade" id="signupmodal" tabindex="-1" role="dialog" aria-labelledby="signupmodal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signupmodaltitle">SignUp Here</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action='/signup' method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" name="username" id="username" placeholder="username"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" class="form-control" name="fname" id="fname" placeholder="first name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" class="form-control" name="lname" id="lname" placeholder="last name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pass1">Password</label>
+                        <input type="password" class="form-control" name="pass1" id="pass1"
+                            placeholder="Choose your password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pass2">Confirm Password</label>
+                        <input type="password" class="form-control" name="pass2" id="pass2"
+                            placeholder="Enter your password again" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <a href="#" data-toggle="modal" data-target="#loginmodal" data-dismiss="modal"
+                    aria-label="Close">Already have an account ?</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- LogIn Modal -->
+<div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="loginmodal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginmodaltitle">LogIn Here</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/login" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" name="loginusername" id="loginusername"
+                            placeholder="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">Password</label>
+                        <input type="password" class="form-control" name="loginpass" id="loginpass"
+                            placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <a href="#" data-toggle="modal" data-target="#signupmodal" data-dismiss="modal"
+                    aria-label="Close">Become a member ?</a>
+            </div>
+        </div>
+    </div>
+</div>
